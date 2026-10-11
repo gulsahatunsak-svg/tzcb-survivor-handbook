@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TZCB Survivor Handbook — community guides for Last Z: Survivor Shooter.">
+<title>TZCB Survivor Handbook</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233a;--line:#2b3955;--gold:#e5bd70;--text:#f4f6fb;--muted:#aab6cc;--accent:#8fb8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#172541 0%,var(--bg) 52%);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--accent)}button,select{font:inherit}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.08em}.crest{width:42px;height:42px;display:grid;place-items:center;border:1px solid #8f784a;border-radius:12px;color:var(--gold);font-size:22px;background:linear-gradient(145deg,#202c43,#111827)}
+.lang{background:#10182a;color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:10px;max-width:48vw}
+.hero{padding:58px 0 38px}.eyebrow{color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(2.3rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.055em;margin:14px 0 18px;max-width:850px}.hero p{color:var(--muted);max-width:680px;font-size:1.08rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:11px;text-decoration:none;font-weight:750;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer}.btn.primary{background:var(--gold);color:#171717;border-color:var(--gold)}
+.notice{border:1px solid #655433;background:#211d17;color:#f5dfb3;padding:13px 15px;border-radius:12px;margin:12px 0 28px;font-size:.92rem}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:32px 0 16px}.section-head h2{font-size:1.7rem;margin:0}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:22px;min-height:190px}.card .num{font-size:.78rem;color:var(--gold);letter-spacing:.12em;font-weight:850}.card h3{font-size:1.25rem;margin:7px 0}.card p{color:var(--muted);margin:0 0 15px}.card a{font-weight:750;text-decoration:none}.guide{margin-top:38px;padding:clamp(20px,4vw,34px);border:1px solid var(--line);background:rgba(18,26,45,.86);border-radius:20px}.guide h2{font-size:1.8rem;margin:0 0 4px}.sub{color:var(--muted);margin-top:0}.guide h3{color:var(--gold);margin:26px 0 8px}.guide h4{margin:18px 0 5px}.guide li{margin:6px 0}.tip{border-left:3px solid var(--gold);padding:12px 15px;background:#1d2638;border-radius:0 10px 10px 0;margin:14px 0}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:500px;margin:12px 0}td,th{padding:11px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--gold);font-size:.9rem}
+.visual-placeholder{margin:15px 0;border:1px dashed #657695;border-radius:14px;padding:20px;color:var(--muted);text-align:center;background:#0f1728}.visual-placeholder strong{display:block;color:var(--text);margin-bottom:5px}
+footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 38px;color:var(--muted);font-size:.9rem}.footerrow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:680px){.topbar{align-items:flex-start}.brand{font-size:.83rem}.crest{width:36px;height:36px}.hero{padding-top:40px}.cards{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:5px}.guide{border-radius:15px}.lang{font-size:.88rem;padding:8px}.notice{font-size:.85rem}}
+</style>
+</head>
+<body>
+<header class="wrap topbar">
+  <div class="brand"><div class="crest">TZ</div><span>TZCB <span style="color:var(--gold)">HANDBOOK</span></span></div>
+  <label for="language" class="sr-only" style="position:absolute;left:-9999px">Choose language</label>
+  <select id="language" class="lang" aria-label="Choose language">
+    <option value="en">🌐 English</option><option value="tr">🇹🇷 Türkçe</option>
+    <option value="es">🇪🇸 Español</option><option value="pt">🇧🇷 Português</option>
+    <option value="fr">🇫🇷 Français</option><option value="de">🇩🇪 Deutsch</option>
+    <option value="other">🌍 Other languages (browser translate)</option>
+  </select>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow" data-i18n="eyebrow">TOP ZOMBIES CLUB • COMMUNITY KNOWLEDGE BASE</div>
+    <h1 data-i18n="title">THE SURVIVOR'S<br><span style="color:var(--gold)">HANDBOOK</span></h1>
+    <p data-i18n="intro">Practical guides, formation ideas and battle strategies for Last Z: Survivor Shooter. Built by players, for players.</p>
+    <div class="actions"><a class="btn primary" href="#guides" data-i18n="browse">Browse the guides ↓</a><a class="btn" href="#hero-guide" data-i18n="heroGuideBtn">Read Hero Guide</a></div>
+  </section>
+  <div class="notice" id="translation-note"><strong>Language tip:</strong> Choose a language above. English and Turkish are built in; for other languages, the translation option opens Google Translate after this site is published.</div>
+  <section id="guides">
+    <div class="section-head"><h2 data-i18n="library">Guide Library</h2><p data-i18n="librarySub">Your quick reference for getting stronger.</p></div>
+    <div class="cards">
+      <article class="card"><div class="num">01 / HEROES</div><h3 data-i18n="card1">Hero Guide</h3><p data-i18n="card1p">Hero levels, stars, troop tiers and equipment.</p><a href="#hero-guide" data-i18n="readGuide">Read guide →</a></article>
+      <article class="card"><div class="num">02 / RESEARCH</div><h3 data-i18n="card2">Research Guide</h3><p data-i18n="coming">Coming soon — research priorities and troop development.</p><a href="#future-guides" data-i18n="planned">Planned guide →</a></article>
+      <article class="card"><div class="num">03 / FORMATIONS</div><h3 data-i18n="card3">Formation Guide</h3><p data-i18n="card3p">Formation examples and faction synergies.</p><a href="#future-guides" data-i18n="planned">Planned guide →</a></article>
+      <article class="card"><div class="num">04 / BATTLES</div><h3 data-i18n="card4">Battle Guides</h3><p data-i18n="card4p">SVS, Canyon Clash and event tactics.</p><a href="#future-guides" data-i18n="planned">Planned guide →</a></article>
+    </div>
+  </section>
+  <section class="guide" id="hero-guide">
+    <div class="eyebrow">GUIDE 01 • HERO DEVELOPMENT</div>
+    <h2 data-i18n="heroGuideTitle">Hero Guide</h2>
+    <p class="sub" data-i18n="heroGuideSub">Four core ways to improve your formation.</p>
+    <div class="visual-placeholder"><strong>📸 Add in-game screenshot here</strong><span data-i18n="imageHint">Replace this box with a real screenshot of the hero screen, star skills, troop tier or equipment. Use your own in-game images for accuracy.</span></div>
+    <h3 data-i18n="heroPower">1. Hero Power</h3>
+    <p data-i18n="heroClass">Heroes are generally grouped into S-Tier, A-Tier and B-Tier. They also belong to one of three factions: Blood Rose, Dawn Wings and Order Guardian.</p>
+    <h3 data-i18n="levelTitle">A) Leveling Up Heroes</h3>
+    <p data-i18n="levelText">A hero's level is limited by your Headquarters level. Each Headquarters level allows another 5 hero levels. Leveling up increases Troop Capacity, Hero Attack and Hero Defense. Use Hero EXP from building upgrades, daily missions and events.</p>
+    <div class="tip"><strong data-i18n="tipLabel">TIP</strong> — <span data-i18n="tipText">Keep your strongest heroes at your current Headquarters level whenever possible.</span></div>
+    <h3 data-i18n="starsTitle">B) Increasing Hero Star Levels</h3>
+    <p data-i18n="starsText">Star upgrades improve core stats. At 4 stars, a hero unlocks their fourth passive skill. Some passive skills provide faction-wide bonuses even when that hero is not in your formation.</p>
+    <ul><li data-i18n="giselle">Giselle: at 4 stars, grants +5% Attack to Blood Rose heroes (as described in this guide).</li><li data-i18n="eva">Eva: at 4 stars, grants +10% Attack to Blood Rose heroes (as described in this guide).</li></ul>
+    <h4 data-i18n="s1Title">S1 Heroes</h4>
+    <p data-i18n="s1Text">S1 heroes such as Olivera, Scarlet and Evelyn have special skills. Check each hero's in-game skill description to confirm the exact conditions and bonuses.</p>
+    <h3 data-i18n="troopTitle">C) Troop Tiers</h3>
+    <p data-i18n="troopText">Troop tier affects formation power and the value of your available Troop Capacity. Higher-tier troops generally contribute more CP per troop.</p>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="tier">Troop tier</th><th>CP per troop</th></tr></thead><tbody><tr><td>T7</td><td>2,600</td></tr><tr><td>T8</td><td>3,530</td></tr></tbody></table></div>
+    <p data-i18n="troopCaution">Example values supplied for this guide. Verify calculations in-game, because the final power increase depends on the actual number of troops and other modifiers.</p>
+    <h3 data-i18n="gearTitle">D) Hero Gear</h3>
+    <p data-i18n="gearText">Gear comes in Green, Blue, Purple and Yellow tiers. Yellow gear offers the highest stats in this guide's tier system. Gear types are Weapon, Helmet, Boots and Armor.</p>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="gearType">Yellow gear type</th><th data-i18n="gearBonus">Main bonuses</th></tr></thead><tbody>
+      <tr><td data-i18n="weapon">Weapon</td><td data-i18n="weaponBonus">Hero Attack and Hero Attack %</td></tr>
+      <tr><td data-i18n="helmet">Helmet</td><td data-i18n="helmetBonus">Hero Attack, Hero Defense and Hero Attack %</td></tr>
+      <tr><td data-i18n="boots">Boots</td><td data-i18n="bootsBonus">Hero Attack, Hero Defense and Hero Defense %</td></tr>
+      <tr><td data-i18n="armor">Armor</td><td data-i18n="armorBonus">Hero Defense and Hero Defense %</td></tr>
+    </tbody></table></div>
+    <p data-i18n="promotion">Yellow gear can be promoted after level 20 using Energy Cores. Its stats improve with each promotion; the first promotion is an important milestone.</p>
+    <h3 data-i18n="recommendTitle">2. Recommended Main Formation</h3>
+    <p><strong>Vivian + Miranda + Sofia + Olivera + Katarina</strong></p>
+    <p data-i18n="recommendText">For players who prefer to spend less, focusing resources on heroes that are easier to star up can be an efficient way to strengthen your first formation. The original recommendation highlights Blood Rose heroes such as Vivian, Miranda and Katarina.</p>
+    <div class="tip"><strong data-i18n="verifyLabel">Before publishing</strong> — <span data-i18n="verifyText">Please verify hero names, faction bonuses, troop CP values and skill effects against the current game version. Game balance and translations can change.</span></div>
+  </section>
+  <section id="future-guides" class="guide">
+    <h2 data-i18n="nextTitle">More guides are on the way</h2>
+    <p data-i18n="nextText">Add new pages here as the alliance handbook grows. Keep this same website link and update the content over time.</p>
+  </section>
+</main>
+<footer><div class="wrap footerrow"><span>© TZCB • Top Zombies Club</span><span data-i18n="footer">Unofficial player-made community guide. Not affiliated with the game publisher.</span></div></footer>
+<script>
+const baseEnglish = {
+eyebrow:"TOP ZOMBIES CLUB • COMMUNITY KNOWLEDGE BASE",
+title:'THE SURVIVOR’S<br><span style="color:var(--gold)">HANDBOOK</span>',
+intro:"Practical guides, formation ideas and battle strategies for Last Z: Survivor Shooter. Built by players, for players.",
+browse:"Browse the guides ↓",heroGuideBtn:"Read Hero Guide",library:"Guide Library",librarySub:"Your quick reference for getting stronger.",
+card1:"Hero Guide",card1p:"Hero levels, stars, troop tiers and equipment.",readGuide:"Read guide →",
+card2:"Research Guide",coming:"Coming soon — research priorities and troop development.",planned:"Planned guide →",
+card3:"Formation Guide",card3p:"Formation examples and faction synergies.",card4:"Battle Guides",card4p:"SVS, Canyon Clash and event tactics.",
+heroGuideTitle:"Hero Guide",heroGuideSub:"Four core ways to improve your formation.",
+imageHint:"Replace this box with a real screenshot of the hero screen, star skills, troop tier or equipment. Use your own in-game images for accuracy.",
+heroPower:"1. Hero Power",heroClass:"Heroes are generally grouped into S-Tier, A-Tier and B-Tier. They also belong to one of three factions: Blood Rose, Dawn Wings and Order Guardian.",
+levelTitle:"A) Leveling Up Heroes",levelText:"A hero's level is limited by your Headquarters level. Each Headquarters level allows another 5 hero levels. Leveling up increases Troop Capacity, Hero Attack and Hero Defense. Use Hero EXP from building upgrades, daily missions and events.",
+tipLabel:"TIP",tipText:"Keep your strongest heroes at your current Headquarters level whenever possible.",
+starsTitle:"B) Increasing Hero Star Levels",starsText:"Star upgrades improve core stats. At 4 stars, a hero unlocks their fourth passive skill. Some passive skills provide faction-wide bonuses even when that hero is not in your formation.",
+giselle:"Giselle: at 4 stars, grants +5% Attack to Blood Rose heroes (as described in this guide).",
+eva:"Eva: at 4 stars, grants +10% Attack to Blood Rose heroes (as described in this guide).",
+s1Title:"S1 Heroes",s1Text:"S1 heroes such as Olivera, Scarlet and Evelyn have special skills. Check each hero's in-game skill description to confirm the exact conditions and bonuses.",
+troopTitle:"C) Troop Tiers",troopText:"Troop tier affects formation power and the value of your available Troop Capacity. Higher-tier troops generally contribute more CP per troop.",
+tier:"Troop tier",troopCaution:"Example values supplied for this guide. Verify calculations in-game, because the final power increase depends on the actual number of troops and other modifiers.",
+gearTitle:"D) Hero Gear",gearText:"Gear comes in Green, Blue, Purple and Yellow tiers. Yellow gear offers the highest stats in this guide's tier system. Gear types are Weapon, Helmet, Boots and Armor.",
+gearType:"Yellow gear type",gearBonus:"Main bonuses",weapon:"Weapon",weaponBonus:"Hero Attack and Hero Attack %",
+helmet:"Helmet",helmetBonus:"Hero Attack, Hero Defense and Hero Attack %",boots:"Boots",bootsBonus:"Hero Attack, Hero Defense and Hero Defense %",armor:"Armor",armorBonus:"Hero Defense and Hero Defense %",
+promotion:"Yellow gear can be promoted after level 20 using Energy Cores. Its stats improve with each promotion; the first promotion is an important milestone.",
+recommendTitle:"2. Recommended Main Formation",recommendText:"For players who prefer to spend less, focusing resources on heroes that are easier to star up can be an efficient way to strengthen your first formation. The original recommendation highlights Blood Rose heroes such as Vivian, Miranda and Katarina.",
+verifyLabel:"Before publishing",verifyText:"Please verify hero names, faction bonuses, troop CP values and skill effects against the current game version. Game balance and translations can change.",
+nextTitle:"More guides are on the way",nextText:"Add new pages here as the alliance handbook grows. Keep this same website link and update the content over time.",
+footer:"Unofficial player-made community guide. Not affiliated with the game publisher.",
+note:"<strong>Language tip:</strong> Choose a language above. English, Turkish, Spanish, Portuguese, French and German are built in. For other languages, use your browser’s translation feature."
+};
+const translations = {
+en:baseEnglish,
+tr:{
+eyebrow:"TOP ZOMBIES CLUB • TOPLULUK REHBERİ",title:'HAYATTA KALANIN<br><span style="color:var(--gold)">EL KİTABI</span>',
+intro:"Last Z: Survivor Shooter için pratik rehberler, formasyon fikirleri ve savaş stratejileri. Oyuncular tarafından, oyuncular için hazırlandı.",
+browse:"Rehberlere göz at ↓",heroGuideBtn:"Kahraman Rehberini Oku",library:"Rehber Kütüphanesi",librarySub:"Güçlenmek için hızlı başvuru kaynağın.",
+card1:"Kahraman Rehberi",card1p:"Kahraman seviyeleri, yıldızlar, asker seviyeleri ve ekipmanlar.",readGuide:"Rehberi oku →",
+card2:"Araştırma Rehberi",coming:"Yakında — araştırma öncelikleri ve asker gelişimi.",planned:"Planlanan rehber →",card3:"Formasyon Rehberi",card3p:"Formasyon örnekleri ve kamp uyumları.",card4:"Savaş Rehberleri",card4p:"SVS, Canyon Clash ve etkinlik taktikleri.",
+heroGuideTitle:"Kahraman Rehberi",heroGuideSub:"Formasyonunu güçlendirmenin dört temel yolu.",
+imageHint:"Bu alanı kahraman ekranı, yıldız yetenekleri, asker seviyesi veya ekipmanların gerçek oyun görüntüsüyle değiştir.",
+heroPower:"1. Kahraman Gücü",heroClass:"Kahramanlar genel olarak S, A ve B seviyelerine ayrılır. Ayrıca üç kampa ayrılırlar: Kan Gülü, Şafak Kanatları ve Düzen Muhafızı.",
+levelTitle:"A) Kahraman Seviyesini Yükseltmek",levelText:"Kahraman seviyesi Karargâh seviyenle sınırlıdır. Her Karargâh seviyesi 5 ek kahraman seviyesi sağlar. Seviye atlamak asker taşıma kapasitesini, kahraman saldırısını ve savunmasını artırır. Bina yükseltmeleri, günlük görevler ve etkinliklerden Kahraman EXP topla.",
+tipLabel:"İPUCU",tipText:"Mümkün olduğunda en güçlü kahramanlarının seviyesini mevcut Karargâh seviyene eşit tut.",
+starsTitle:"B) Kahraman Yıldız Seviyesini Yükseltmek",starsText:"Yıldız yükseltmeleri temel istatistikleri artırır. Kahraman 4 yıldıza ulaştığında dördüncü pasif yeteneği açılır. Bazı pasif yetenekler kahraman formasyonda olmasa bile tüm kampa bonus sağlar.",
+giselle:"Giselle: 4 yıldızda Kan Gülü kahramanlarına +%5 saldırı verir (bu rehberde belirtilen bilgiye göre).",eva:"Eva: 4 yıldızda Kan Gülü kahramanlarına +%10 saldırı verir (bu rehberde belirtilen bilgiye göre).",
+s1Title:"S1 Kahramanları",s1Text:"Olivera, Scarlet ve Evelyn gibi S1 kahramanlarının özel yetenekleri vardır. Koşulları ve bonusları doğrulamak için oyun içindeki yetenek açıklamalarını kontrol et.",
+troopTitle:"C) Asker Seviyeleri",troopText:"Asker seviyesi formasyon gücünü ve mevcut asker taşıma kapasitesinin değerini etkiler. Daha yüksek seviyeli askerler genellikle asker başına daha fazla CP sağlar.",
+tier:"Asker seviyesi",troopCaution:"Bunlar rehber için verilen örnek değerlerdir. Nihai güç artışı asker sayısına ve diğer çarpanlara bağlı olduğundan hesaplamaları oyun içinde doğrula.",
+gearTitle:"D) Kahraman Ekipmanları",gearText:"Ekipmanlar Yeşil, Mavi, Mor ve Sarı seviyelerindedir. Sarı ekipmanlar en yüksek istatistikleri sağlar. Ekipman türleri Silah, Kask, Bot ve Zırhtır.",
+gearType:"Sarı ekipman türü",gearBonus:"Temel bonuslar",weapon:"Silah",weaponBonus:"Kahraman Saldırısı ve % Kahraman Saldırısı",helmet:"Kask",helmetBonus:"Kahraman Saldırısı, Kahraman Savunması ve % Kahraman Saldırısı",boots:"Bot",bootsBonus:"Kahraman Saldırısı, Kahraman Savunması ve % Kahraman Savunması",armor:"Zırh",armorBonus:"Kahraman Savunması ve % Kahraman Savunması",
+promotion:"Sarı ekipmanlar 20. seviyeden sonra Enerji Çekirdekleriyle terfi ettirilebilir. Her terfi istatistikleri artırır; ilk terfi önemli bir eşiktir.",
+recommendTitle:"2. Önerilen Ana Formasyon",recommendText:"Daha az harcamak isteyen oyuncular için yıldız seviyesi daha kolay yükseltilebilen kahramanlara kaynak ayırmak etkili olabilir. Öneride Vivian, Miranda ve Katarina gibi Kan Gülü kahramanları öne çıkıyor.",
+verifyLabel:"Yayımlamadan önce",verifyText:"Kahraman adlarını, kamp bonuslarını, asker CP değerlerini ve yetenek etkilerini oyunun güncel sürümünden doğrula. Oyun dengesi ve çeviriler değişebilir.",
+nextTitle:"Yeni rehberler yolda",nextText:"İttifak el kitabı büyüdükçe buraya yeni sayfalar ekle. Aynı site bağlantısını koruyup içeriği güncelleyebilirsin.",
+footer:"Oyuncular tarafından hazırlanmış resmî olmayan topluluk rehberidir. Oyun yayıncısıyla bağlantısı yoktur.",
+note:"<strong>Dil bilgisi:</strong> İngilizce ve Türkçe içerik yerleşiktir. Diğer diller için tarayıcının çeviri özelliğini kullanabilirsin."
+},
+es:{
+eyebrow:"TOP ZOMBIES CLUB • CENTRO DE GUÍAS DE LA COMUNIDAD",title:'MANUAL DEL<br><span style="color:var(--gold)">SUPERVIVIENTE</span>',
+intro:"Guías prácticas, ideas de formación y estrategias de batalla para Last Z: Survivor Shooter. Creado por jugadores, para jugadores.",
+browse:"Explorar las guías ↓",heroGuideBtn:"Leer la guía de héroes",library:"Biblioteca de guías",librarySub:"Tu referencia rápida para hacerte más fuerte.",
+card1:"Guía de héroes",card1p:"Niveles, estrellas, niveles de tropas y equipo.",readGuide:"Leer guía →",card2:"Guía de investigación",coming:"Próximamente: prioridades de investigación y desarrollo de tropas.",planned:"Guía prevista →",card3:"Guía de formaciones",card3p:"Ejemplos de formaciones y sinergias de facción.",card4:"Guías de batalla",card4p:"Tácticas para SVS, Canyon Clash y eventos.",
+heroGuideTitle:"Guía de héroes",heroGuideSub:"Cuatro formas principales de mejorar tu formación.",imageHint:"Sustituye este espacio por una captura real de héroes, habilidades, tropas o equipo.",
+heroPower:"1. Poder de los héroes",heroClass:"Los héroes se clasifican en rangos S, A y B. También pertenecen a una de tres facciones: Blood Rose, Dawn Wings y Order Guardian.",
+levelTitle:"A) Subir de nivel a los héroes",levelText:"El nivel del héroe está limitado por el nivel de tu Cuartel General. Cada nivel del Cuartel permite subir otros 5 niveles de héroe. Subir de nivel aumenta la capacidad de tropas, el ataque y la defensa del héroe. Consigue EXP de héroe mejorando edificios, completando misiones diarias y participando en eventos.",
+tipLabel:"CONSEJO",tipText:"Siempre que sea posible, mantén a tus héroes más fuertes al nivel actual de tu Cuartel General.",
+starsTitle:"B) Aumentar las estrellas",starsText:"Las estrellas mejoran las estadísticas principales. Al llegar a 4 estrellas, se desbloquea la cuarta habilidad pasiva. Algunas habilidades benefician a toda la facción aunque el héroe no esté en la formación.",
+giselle:"Giselle: con 4 estrellas, otorga +5 % de ataque a los héroes Blood Rose, según esta guía.",eva:"Eva: con 4 estrellas, otorga +10 % de ataque a los héroes Blood Rose, según esta guía.",
+s1Title:"Héroes S1",s1Text:"Héroes S1 como Olivera, Scarlet y Evelyn tienen habilidades especiales. Comprueba las descripciones del juego para confirmar las condiciones y bonificaciones.",
+troopTitle:"C) Niveles de tropas",troopText:"El nivel de las tropas influye en el poder de la formación y en el valor de la capacidad disponible. Las tropas de nivel superior suelen aportar más CP por unidad.",
+tier:"Nivel de tropa",troopCaution:"Valores de ejemplo para esta guía. Comprueba los cálculos en el juego, ya que el aumento final depende del número de tropas y otros modificadores.",
+gearTitle:"D) Equipo de héroe",gearText:"El equipo tiene niveles Verde, Azul, Morado y Amarillo. El equipo amarillo ofrece las estadísticas más altas. Hay armas, cascos, botas y armaduras.",
+gearType:"Tipo de equipo amarillo",gearBonus:"Bonificaciones principales",weapon:"Arma",weaponBonus:"Ataque del héroe y % de ataque del héroe",helmet:"Casco",helmetBonus:"Ataque, defensa y % de ataque del héroe",boots:"Botas",bootsBonus:"Ataque, defensa y % de defensa del héroe",armor:"Armadura",armorBonus:"Defensa del héroe y % de defensa del héroe",
+promotion:"El equipo amarillo se puede promocionar después del nivel 20 con Núcleos de energía. Sus estadísticas aumentan con cada promoción.",
+recommendTitle:"2. Formación principal recomendada",recommendText:"Si prefieres gastar menos, invertir en héroes cuyas estrellas sean más fáciles de subir puede fortalecer tu primera formación. Esta guía recomienda héroes Blood Rose como Vivian, Miranda y Katarina.",
+verifyLabel:"Antes de publicar",verifyText:"Verifica los nombres, bonificaciones de facción, valores de CP y habilidades en la versión actual del juego.",
+nextTitle:"Próximamente más guías",nextText:"Añade nuevas páginas a medida que crezca el manual de la alianza. Mantén el mismo enlace y actualiza el contenido.",
+footer:"Guía comunitaria no oficial creada por jugadores. No está afiliada al editor del juego.",note:"<strong>Idioma:</strong> Español está integrado en esta página. Para otros idiomas, usa la traducción del navegador."
+},
+pt:{
+eyebrow:"TOP ZOMBIES CLUB • CENTRAL DE GUIAS DA COMUNIDADE",title:'MANUAL DO<br><span style="color:var(--gold)">SOBREVIVENTE</span>',
+intro:"Guias práticos, ideias de formação e estratégias de batalha para Last Z: Survivor Shooter. Feito por jogadores, para jogadores.",
+browse:"Ver os guias ↓",heroGuideBtn:"Ler guia de heróis",library:"Biblioteca de guias",librarySub:"Seu guia rápido para ficar mais forte.",
+card1:"Guia de heróis",card1p:"Níveis, estrelas, tropas e equipamentos.",readGuide:"Ler guia →",card2:"Guia de pesquisa",coming:"Em breve — prioridades de pesquisa e evolução das tropas.",planned:"Guia planejado →",card3:"Guia de formação",card3p:"Exemplos de formação e sinergias de facção.",card4:"Guias de batalha",card4p:"Táticas para SVS, Canyon Clash e eventos.",
+heroGuideTitle:"Guia de heróis",heroGuideSub:"Quatro maneiras principais de melhorar sua formação.",imageHint:"Substitua este espaço por uma captura real da tela de heróis, habilidades, tropas ou equipamentos.",
+heroPower:"1. Poder dos heróis",heroClass:"Os heróis são classificados nos níveis S, A e B. Também pertencem a uma de três facções: Blood Rose, Dawn Wings e Order Guardian.",
+levelTitle:"A) Subir o nível dos heróis",levelText:"O nível do herói é limitado pelo nível do seu Quartel-General. Cada nível do Quartel permite mais 5 níveis de herói. Subir de nível aumenta a capacidade de tropas, o ataque e a defesa do herói. Obtenha EXP de herói ao melhorar edifícios, concluir missões diárias e participar de eventos.",
+tipLabel:"DICA",tipText:"Sempre que possível, mantenha seus heróis mais fortes no nível atual do Quartel-General.",
+starsTitle:"B) Aumentar as estrelas",starsText:"As estrelas melhoram os atributos principais. Ao atingir 4 estrelas, o herói desbloqueia a quarta habilidade passiva. Algumas habilidades dão bônus à facção mesmo quando o herói não está na formação.",
+giselle:"Giselle: com 4 estrelas, concede +5% de ataque aos heróis Blood Rose, conforme este guia.",eva:"Eva: com 4 estrelas, concede +10% de ataque aos heróis Blood Rose, conforme este guia.",
+s1Title:"Heróis S1",s1Text:"Heróis S1 como Olivera, Scarlet e Evelyn têm habilidades especiais. Confira as descrições no jogo para confirmar condições e bônus.",
+troopTitle:"C) Níveis das tropas",troopText:"O nível das tropas afeta o poder da formação e o valor da capacidade disponível. Tropas de nível superior geralmente oferecem mais CP por unidade.",
+tier:"Nível da tropa",troopCaution:"Valores de exemplo. Confira os cálculos no jogo, pois o aumento final depende da quantidade de tropas e de outros modificadores.",
+gearTitle:"D) Equipamentos dos heróis",gearText:"Os equipamentos têm níveis Verde, Azul, Roxo e Amarelo. O equipamento amarelo oferece os maiores atributos. Os tipos são arma, capacete, botas e armadura.",
+gearType:"Tipo de equipamento amarelo",gearBonus:"Bônus principais",weapon:"Arma",weaponBonus:"Ataque do herói e % de ataque do herói",helmet:"Capacete",helmetBonus:"Ataque, defesa e % de ataque do herói",boots:"Botas",bootsBonus:"Ataque, defesa e % de defesa do herói",armor:"Armadura",armorBonus:"Defesa do herói e % de defesa do herói",
+promotion:"Equipamentos amarelos podem ser promovidos após o nível 20 usando Núcleos de Energia. Os atributos aumentam a cada promoção.",
+recommendTitle:"2. Formação principal recomendada",recommendText:"Para gastar menos, investir em heróis cujas estrelas são mais fáceis de aumentar pode fortalecer sua primeira formação. Este guia destaca heróis Blood Rose como Vivian, Miranda e Katarina.",
+verifyLabel:"Antes de publicar",verifyText:"Confira nomes, bônus de facção, valores de CP e habilidades na versão atual do jogo.",
+nextTitle:"Mais guias em breve",nextText:"Adicione novas páginas conforme o manual da aliança crescer. Mantenha o mesmo link e atualize o conteúdo.",
+footer:"Guia comunitário não oficial criado por jogadores. Não é afiliado à publicadora do jogo.",note:"<strong>Idioma:</strong> Português está integrado nesta página. Para outros idiomas, use a tradução do navegador."
+},
+fr:{
+eyebrow:"TOP ZOMBIES CLUB • CENTRE DE GUIDES COMMUNAUTAIRES",title:'LE MANUEL DU<br><span style="color:var(--gold)">SURVIVANT</span>',
+intro:"Guides pratiques, idées de formations et stratégies de combat pour Last Z: Survivor Shooter. Créé par des joueurs, pour les joueurs.",
+browse:"Voir les guides ↓",heroGuideBtn:"Lire le guide des héros",library:"Bibliothèque de guides",librarySub:"Votre référence rapide pour devenir plus fort.",
+card1:"Guide des héros",card1p:"Niveaux, étoiles, troupes et équipement.",readGuide:"Lire le guide →",card2:"Guide de recherche",coming:"Bientôt : priorités de recherche et progression des troupes.",planned:"Guide prévu →",card3:"Guide des formations",card3p:"Exemples de formations et synergies de factions.",card4:"Guides de combat",card4p:"Tactiques SVS, Canyon Clash et événements.",
+heroGuideTitle:"Guide des héros",heroGuideSub:"Quatre façons essentielles d'améliorer votre formation.",imageHint:"Remplacez cet espace par une véritable capture d'écran des héros, compétences, troupes ou équipements.",
+heroPower:"1. Puissance des héros",heroClass:"Les héros sont classés en rangs S, A et B. Ils appartiennent aussi à l'une des trois factions : Blood Rose, Dawn Wings et Order Guardian.",
+levelTitle:"A) Monter le niveau des héros",levelText:"Le niveau d'un héros est limité par celui de votre quartier général. Chaque niveau du quartier général permet 5 niveaux de héros supplémentaires. Monter de niveau augmente la capacité des troupes, l'attaque et la défense du héros. Obtenez de l'EXP grâce aux améliorations de bâtiments, missions quotidiennes et événements.",
+tipLabel:"CONSEIL",tipText:"Dans la mesure du possible, gardez vos héros les plus puissants au niveau actuel de votre quartier général.",
+starsTitle:"B) Augmenter les étoiles",starsText:"Les étoiles améliorent les statistiques principales. À 4 étoiles, le héros débloque sa quatrième compétence passive. Certaines compétences profitent à toute la faction même si le héros n'est pas dans la formation.",
+giselle:"Giselle : à 4 étoiles, accorde +5 % d'attaque aux héros Blood Rose, selon ce guide.",eva:"Eva : à 4 étoiles, accorde +10 % d'attaque aux héros Blood Rose, selon ce guide.",
+s1Title:"Héros S1",s1Text:"Les héros S1 comme Olivera, Scarlet et Evelyn possèdent des compétences spéciales. Vérifiez leurs descriptions en jeu pour confirmer les conditions et bonus.",
+troopTitle:"C) Niveaux des troupes",troopText:"Le niveau des troupes influence la puissance de la formation et la capacité disponible. Les troupes de niveau supérieur apportent généralement plus de CP par unité.",
+tier:"Niveau de troupe",troopCaution:"Valeurs fournies à titre d'exemple. Vérifiez les calculs en jeu : le gain final dépend du nombre de troupes et d'autres modificateurs.",
+gearTitle:"D) Équipement des héros",gearText:"L'équipement existe en niveaux Vert, Bleu, Violet et Jaune. L'équipement jaune offre les statistiques les plus élevées. Les types sont arme, casque, bottes et armure.",
+gearType:"Type d'équipement jaune",gearBonus:"Bonus principaux",weapon:"Arme",weaponBonus:"Attaque du héros et % d'attaque du héros",helmet:"Casque",helmetBonus:"Attaque, défense et % d'attaque du héros",boots:"Bottes",bootsBonus:"Attaque, défense et % de défense du héros",armor:"Armure",armorBonus:"Défense du héros et % de défense du héros",
+promotion:"L'équipement jaune peut être promu après le niveau 20 avec des noyaux d'énergie. Ses statistiques augmentent à chaque promotion.",
+recommendTitle:"2. Formation principale recommandée",recommendText:"Pour dépenser moins, investir dans des héros dont les étoiles sont plus faciles à augmenter peut renforcer votre première formation. Ce guide recommande notamment Vivian, Miranda et Katarina de Blood Rose.",
+verifyLabel:"Avant publication",verifyText:"Vérifiez les noms, bonus de faction, valeurs CP et compétences dans la version actuelle du jeu.",
+nextTitle:"D'autres guides arrivent",nextText:"Ajoutez des pages au fur et à mesure que le manuel de l'alliance grandit. Conservez le même lien et actualisez le contenu.",
+footer:"Guide communautaire non officiel créé par des joueurs. Non affilié à l'éditeur du jeu.",note:"<strong>Langue :</strong> Le français est intégré à cette page. Pour les autres langues, utilisez la traduction du navigateur."
+},
+de:{
+eyebrow:"TOP ZOMBIES CLUB • COMMUNITY-WISSENSDATENBANK",title:'DAS ÜBERLEBENDEN-<br><span style="color:var(--gold)">HANDBUCH</span>',
+intro:"Praktische Anleitungen, Formationsideen und Kampfstrategien für Last Z: Survivor Shooter. Von Spielern für Spieler erstellt.",
+browse:"Guides ansehen ↓",heroGuideBtn:"Helden-Guide lesen",library:"Guide-Bibliothek",librarySub:"Dein schneller Überblick, um stärker zu werden.",
+card1:"Helden-Guide",card1p:"Heldenlevel, Sterne, Truppenstufen und Ausrüstung.",readGuide:"Guide lesen →",card2:"Forschungs-Guide",coming:"Demnächst — Forschungsprioritäten und Truppenentwicklung.",planned:"Geplanter Guide →",card3:"Formations-Guide",card3p:"Formationsbeispiele und Fraktionssynergien.",card4:"Kampf-Guides",card4p:"Taktiken für SVS, Canyon Clash und Events.",
+heroGuideTitle:"Helden-Guide",heroGuideSub:"Vier wichtige Wege, deine Formation zu verbessern.",imageHint:"Ersetze diesen Bereich durch einen echten Screenshot der Helden, Sterne-Fähigkeiten, Truppen oder Ausrüstung.",
+heroPower:"1. Heldenstärke",heroClass:"Helden werden in die Ränge S, A und B eingeteilt. Außerdem gehören sie zu einer von drei Fraktionen: Blood Rose, Dawn Wings und Order Guardian.",
+levelTitle:"A) Helden aufleveln",levelText:"Das Heldenlevel ist durch dein Hauptquartierlevel begrenzt. Jede Hauptquartierstufe ermöglicht 5 zusätzliche Heldenlevel. Ein Levelaufstieg erhöht Truppenkapazität, Heldenangriff und Heldenverteidigung. Sammle Helden-EXP durch Gebäude-Upgrades, tägliche Aufgaben und Events.",
+tipLabel:"TIPP",tipText:"Halte deine stärksten Helden nach Möglichkeit auf dem aktuellen Hauptquartierlevel.",
+starsTitle:"B) Heldensterne erhöhen",starsText:"Sterne verbessern die Grundwerte. Bei 4 Sternen wird die vierte passive Fähigkeit freigeschaltet. Einige passive Fähigkeiten stärken die gesamte Fraktion, auch wenn der Held nicht in der Formation steht.",
+giselle:"Giselle: Gewährt bei 4 Sternen +5 % Angriff für Blood-Rose-Helden, wie in diesem Guide angegeben.",eva:"Eva: Gewährt bei 4 Sternen +10 % Angriff für Blood-Rose-Helden, wie in diesem Guide angegeben.",
+s1Title:"S1-Helden",s1Text:"S1-Helden wie Olivera, Scarlet und Evelyn besitzen besondere Fähigkeiten. Prüfe die Beschreibungen im Spiel, um Bedingungen und Boni zu bestätigen.",
+troopTitle:"C) Truppenstufen",troopText:"Die Truppenstufe beeinflusst die Formationsstärke und den Wert deiner verfügbaren Truppenkapazität. Höherstufige Truppen bringen normalerweise mehr CP pro Einheit.",
+tier:"Truppenstufe",troopCaution:"Beispielwerte für diesen Guide. Prüfe die Berechnung im Spiel, da der tatsächliche Machtzuwachs von Truppenzahl und weiteren Modifikatoren abhängt.",
+gearTitle:"D) Heldenausrüstung",gearText:"Ausrüstung gibt es in Grün, Blau, Lila und Gelb. Gelbe Ausrüstung bietet die höchsten Werte. Die Typen sind Waffe, Helm, Stiefel und Rüstung.",
+gearType:"Gelber Ausrüstungstyp",gearBonus:"Hauptboni",weapon:"Waffe",weaponBonus:"Heldenangriff und Heldenangriff %",helmet:"Helm",helmetBonus:"Heldenangriff, Heldenverteidigung und Heldenangriff %",boots:"Stiefel",bootsBonus:"Heldenangriff, Heldenverteidigung und Heldenverteidigung %",armor:"Rüstung",armorBonus:"Heldenverteidigung und Heldenverteidigung %",
+promotion:"Gelbe Ausrüstung kann ab Level 20 mit Energiekernen befördert werden. Die Werte steigen mit jeder Beförderung.",
+recommendTitle:"2. Empfohlene Hauptformation",recommendText:"Wer weniger ausgeben möchte, kann Ressourcen in Helden investieren, deren Sterne leichter zu erhöhen sind. Dieser Guide empfiehlt unter anderem Blood-Rose-Helden wie Vivian, Miranda und Katarina.",
+verifyLabel:"Vor der Veröffentlichung",verifyText:"Prüfe Heldennamen, Fraktionsboni, Truppen-CP und Fähigkeiten in der aktuellen Spielversion.",
+nextTitle:"Weitere Guides folgen",nextText:"Ergänze neue Seiten, wenn das Allianz-Handbuch wächst. Behalte denselben Link und aktualisiere den Inhalt.",
+footer:"Inoffizieller Community-Guide von Spielern. Keine Verbindung zum Spielehersteller.",note:"<strong>Sprachhinweis:</strong> Deutsch ist direkt integriert. Für andere Sprachen nutze die Übersetzungsfunktion deines Browsers."
+}
+};
+const language = document.getElementById('language');
+const note = document.getElementById('translation-note');
+function applyLanguage(code){
+  if(code === 'other'){
+    note.innerHTML = '<strong>Other languages:</strong> Use Chrome’s menu (⋮) → Translate. Built-in translations are available in English, Turkish, Spanish, Portuguese, French and German.';
+    return;
+  }
+  const dict = translations[code] || translations.en;
+  document.documentElement.lang = code;
+  document.documentElement.dir = code === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.dataset.i18n;
+    if(dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  if(dict.note) note.innerHTML = dict.note;
+}
+language.addEventListener('change',e=>applyLanguage(e.target.value));
+applyLanguage('en');
+</script>
+</body></html>
