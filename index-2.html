@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TZCB Survivor Handbook — community guides for Last Z: Survivor Shooter.">
+<title>TZCB Survivor Handbook</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2d;--panel2:#18233a;--line:#2b3955;--gold:#e5bd70;--text:#f4f6fb;--muted:#aab6cc;--accent:#8fb8ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#172541 0%,var(--bg) 52%);color:var(--text);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--accent)}button,select{font:inherit}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1120px,92%);margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.08em}.crest{width:42px;height:42px;display:grid;place-items:center;border:1px solid #8f784a;border-radius:12px;color:var(--gold);font-size:22px;background:linear-gradient(145deg,#202c43,#111827)}
+.lang{background:#10182a;color:var(--text);border:1px solid var(--line);padding:9px 12px;border-radius:10px;max-width:48vw}
+.hero{padding:58px 0 38px}.eyebrow{color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}.hero h1{font-size:clamp(2.3rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.055em;margin:14px 0 18px;max-width:850px}.hero p{color:var(--muted);max-width:680px;font-size:1.08rem}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:11px;text-decoration:none;font-weight:750;border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer}.btn.primary{background:var(--gold);color:#171717;border-color:var(--gold)}
+.notice{border:1px solid #655433;background:#211d17;color:#f5dfb3;padding:13px 15px;border-radius:12px;margin:12px 0 28px;font-size:.92rem}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:32px 0 16px}.section-head h2{font-size:1.7rem;margin:0}.section-head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:linear-gradient(150deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:18px;padding:22px;min-height:190px}.card .num{font-size:.78rem;color:var(--gold);letter-spacing:.12em;font-weight:850}.card h3{font-size:1.25rem;margin:7px 0}.card p{color:var(--muted);margin:0 0 15px}.card a{font-weight:750;text-decoration:none}.guide{margin-top:38px;padding:clamp(20px,4vw,34px);border:1px solid var(--line);background:rgba(18,26,45,.86);border-radius:20px}.guide h2{font-size:1.8rem;margin:0 0 4px}.sub{color:var(--muted);margin-top:0}.guide h3{color:var(--gold);margin:26px 0 8px}.guide h4{margin:18px 0 5px}.guide li{margin:6px 0}.tip{border-left:3px solid var(--gold);padding:12px 15px;background:#1d2638;border-radius:0 10px 10px 0;margin:14px 0}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:500px;margin:12px 0}td,th{padding:11px;border-bottom:1px solid var(--line);text-align:left}th{color:var(--gold);font-size:.9rem}
+footer{border-top:1px solid var(--line);margin-top:50px;padding:26px 0 38px;color:var(--muted);font-size:.9rem}.footerrow{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.hero-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:18px 0 26px}.hero-gallery figure,.skill-gallery figure{margin:0;min-width:0;background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}.hero-gallery img,.skill-gallery img{display:block;width:100%;height:auto;object-fit:contain;background:#111827}.hero-gallery figcaption,.skill-gallery figcaption{padding:9px 10px;color:var(--text);font-weight:750;text-align:center;font-size:.92rem}
+.skill-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:18px 0 24px}
+.research-visual{margin:20px auto 26px;max-width:390px;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.research-visual img{display:block;width:100%;height:auto;max-height:720px;object-fit:contain;background:#111827}.research-visual figcaption{padding:10px 12px;text-align:center;color:var(--muted);font-size:.9rem}
+@media(max-width:680px){.topbar{align-items:flex-start}.brand{font-size:.83rem}.crest{width:36px;height:36px}.hero{padding-top:40px}.cards{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:5px}.guide{border-radius:15px}.lang{font-size:.88rem;padding:8px}.notice{font-size:.85rem}.hero-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.skill-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+</style>
+</head>
+<body>
+<header class="wrap topbar">
+  <div class="brand"><div class="crest">TZ</div><span>TZCB <span style="color:var(--gold)">HANDBOOK</span></span></div>
+  <label for="language" style="position:absolute;left:-9999px">Choose language</label>
+  <select id="language" class="lang" aria-label="Choose language">
+    <option value="en">🌐 English</option><option value="tr">🇹🇷 Türkçe</option>
+    <option value="es">🇪🇸 Español</option><option value="de">🇩🇪 Deutsch</option>
+    <option value="pt">🇧🇷 Português</option><option value="fr">🇫🇷 Français</option>
+    <option value="ar">🇸🇦 العربية</option><option value="ru">🇷🇺 Русский</option>
+    <option value="it">🇮🇹 Italiano</option><option value="pl">🇵🇱 Polski</option>
+    <option value="id">🇮🇩 Bahasa Indonesia</option><option value="ja">🇯🇵 日本語</option>
+    <option value="ko">🇰🇷 한국어</option><option value="zh-CN">🇨🇳 简体中文</option>
+    <option value="hi">🇮🇳 हिन्दी</option>
+  </select>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow" data-i18n="eyebrow">TOP ZOMBIES CLUB • COMMUNITY KNOWLEDGE BASE</div>
+    <h1 data-i18n="title">THE SURVIVOR’S<br><span style="color:var(--gold)">HANDBOOK</span></h1>
+    <p data-i18n="intro">Practical guides, formation ideas and battle strategies for Last Z: Survivor Shooter. Built by players, for players.</p>
+    <div class="actions"><a class="btn primary" href="#guides" data-i18n="browse">Browse the guides ↓</a><a class="btn" href="#hero-guide" data-i18n="heroGuideBtn">Read Hero Guide</a></div>
+  </section>
+  <div class="notice" id="translation-note"><strong>Language tip:</strong> English and Turkish are built in. Other languages open a translated version of this page using Google Translate.</div>
+  <section id="guides">
+    <div class="section-head"><h2 data-i18n="library">Guide Library</h2><p data-i18n="librarySub">Your quick reference for getting stronger.</p></div>
+    <div class="cards">
+      <article class="card"><div class="num">01 / HEROES</div><h3 data-i18n="card1">Hero Guide</h3><p data-i18n="card1p">Hero levels, stars, troop tiers and equipment.</p><a href="#hero-guide" data-i18n="readGuide">Read guide →</a></article>
+      <article class="card"><div class="num">02 / RESEARCH</div><h3 data-i18n="card2">Research Guide</h3><p data-i18n="coming">Season 1 research priorities, badge use and combat upgrades.</p><a href="#research-guide" data-i18n="readGuide">Read guide →</a></article>
+      <article class="card"><div class="num">03 / FORMATIONS</div><h3 data-i18n="card3">Formation Guide</h3><p data-i18n="card3p">Formation examples and faction synergies.</p><a href="#future-guides" data-i18n="planned">Planned guide →</a></article>
+      <article class="card"><div class="num">04 / BATTLES</div><h3 data-i18n="card4">Battle Guides</h3><p data-i18n="card4p">SVS, Canyon Clash and event tactics.</p><a href="#future-guides" data-i18n="planned">Planned guide →</a></article>
+    </div>
+  </section>
+  <section class="guide" id="hero-guide">
+    <div class="eyebrow">GUIDE 01 • HERO DEVELOPMENT</div>
+    <h2 data-i18n="heroGuideTitle">Hero Guide</h2>
+    <p class="sub" data-i18n="heroGuideSub">Four core ways to improve your formation.</p>
+    <div class="hero-gallery" aria-label="Approved hero screenshots">
+      <figure><img src="olivera.png" alt="Olivera hero screen"><figcaption>Olivera</figcaption></figure>
+      <figure><img src="katrina.png" alt="Katrina hero screen"><figcaption>Katrina</figcaption></figure>
+      <figure><img src="vivian.png" alt="Vivian hero screen"><figcaption>Vivian</figcaption></figure>
+      <figure><img src="sophia.png" alt="Sophia hero screen"><figcaption>Sophia</figcaption></figure>
+      <figure><img src="miranda.png" alt="Miranda hero screen"><figcaption>Miranda</figcaption></figure>
+    </div>
+    <h3 data-i18n="heroPower">1. Hero Power</h3>
+    <p data-i18n="heroClass">Heroes are generally grouped into S-Tier, A-Tier and B-Tier. They also belong to one of three factions: Blood Rose, Dawn Wings and Order Guardian.</p>
+    <h3 data-i18n="levelTitle">A) Leveling Up Heroes</h3>
+    <p data-i18n="levelText">A hero's level is limited by your Headquarters level. Each Headquarters level allows another 5 hero levels. Leveling up increases Troop Capacity, Hero Attack and Hero Defense. Use Hero EXP from building upgrades, daily missions and events.</p>
+    <div class="tip"><strong data-i18n="tipLabel">TIP</strong> — <span data-i18n="tipText">Keep your strongest heroes at your current Headquarters level whenever possible.</span></div>
+    <h3 data-i18n="starsTitle">B) Increasing Hero Star Levels</h3>
+    <p data-i18n="starsText">Star upgrades improve core stats. At 4 stars, a hero unlocks their fourth passive skill. Some passive skills provide faction-wide bonuses even when that hero is not in your formation.</p>
+    <ul><li data-i18n="giselle">Giselle: at 4 stars, grants +5% Attack to Blood Rose heroes (as described in this guide).</li><li data-i18n="eva">Ava: at 4 stars, grants +10% Attack to Blood Rose heroes (as described in this guide).</li></ul>
+    <div class="skill-gallery" aria-label="Approved passive skill screenshots">
+      <figure><img src="giselle-skill.png" alt="Giselle faction attack skill screen"><figcaption>Giselle · Faction Attack</figcaption></figure>
+      <figure><img src="ava-skill.png" alt="Ava faction attack skill screen"><figcaption>Ava · Faction Attack</figcaption></figure>
+      <figure><img src="audrey-skill.png" alt="Audrey faction defense skill screen"><figcaption>Audrey · Faction Defense</figcaption></figure>
+    </div>
+    <h4 data-i18n="s1Title">S1 Heroes</h4>
+    <p data-i18n="s1Text">S1 heroes such as Olivera, Scarlet and Evelyn have special skills. Check each hero's in-game skill description to confirm the exact conditions and bonuses.</p>
+    <h3 data-i18n="troopTitle">C) Troop Tiers</h3>
+    <p data-i18n="troopText">Troop tier affects formation power and the value of your available Troop Capacity. Higher-tier troops generally contribute more CP per troop.</p>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="tier">Troop tier</th><th>CP per troop</th></tr></thead><tbody><tr><td>T7</td><td>2,600</td></tr><tr><td>T8</td><td>3,530</td></tr></tbody></table></div>
+    <p data-i18n="troopCaution">Example values supplied for this guide. Verify calculations in-game, because the final power increase depends on the actual number of troops and other modifiers.</p>
+    <h3 data-i18n="gearTitle">D) Hero Gear</h3>
+    <p data-i18n="gearText">Gear comes in Green, Blue, Purple and Yellow tiers. Yellow gear offers the highest stats in this guide's tier system. Gear types are Weapon, Helmet, Boots and Armor.</p>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="gearType">Yellow gear type</th><th data-i18n="gearBonus">Main bonuses</th></tr></thead><tbody>
+      <tr><td data-i18n="weapon">Weapon</td><td data-i18n="weaponBonus">Hero Attack and Hero Attack %</td></tr>
+      <tr><td data-i18n="helmet">Helmet</td><td data-i18n="helmetBonus">Hero Attack, Hero Defense and Hero Attack %</td></tr>
+      <tr><td data-i18n="boots">Boots</td><td data-i18n="bootsBonus">Hero Attack, Hero Defense and Hero Defense %</td></tr>
+      <tr><td data-i18n="armor">Armor</td><td data-i18n="armorBonus">Hero Defense and Hero Defense %</td></tr>
+    </tbody></table></div>
+    <p data-i18n="promotion">Yellow gear can be promoted after level 20 using Energy Cores. Its stats improve with each promotion; the first promotion is an important milestone.</p>
+    <h3 data-i18n="recommendTitle">2. Recommended Main Formation</h3>
+    <p><strong>Vivian + Miranda + Sophia + Olivera + Katrina</strong></p>
+    <p data-i18n="recommendText">For players who prefer to spend less, focusing resources on heroes that are easier to star up can be an efficient way to strengthen your first formation. The original recommendation highlights Blood Rose heroes such as Vivian, Miranda and Katrina.</p>
+    <div class="tip"><strong data-i18n="verifyLabel">Before publishing</strong> — <span data-i18n="verifyText">Please verify hero names, faction bonuses, troop CP values and skill effects against the current game version. Game balance and translations can change.</span></div>
+  </section>
+  <section class="guide" id="research-guide">
+    <div class="eyebrow">GUIDE 02 • SEASON 1 DEVELOPMENT</div>
+    <h2>Technology Research Guide – Season 1</h2>
+    <p class="sub">Recommended research priorities to save badges and build combat power efficiently.</p>
+    <figure class="research-visual">
+      <img src="techs.png" alt="Season 1 technology research tree and current research progress">
+      <figcaption>Season 1 technology research overview</figcaption>
+    </figure>
+
+    <p>Technology research is divided into two main categories:</p>
+    <ol><li>Functional Research</li><li>Combat Research</li></ol>
+    <p>These two research types serve different purposes. Knowing which technologies to prioritize, when to invest in them, and in what order to complete them is essential for saving both time and badges.</p>
+
+    <h3>1. Functional Research</h3>
+    <p>When you start the game, the system guides you toward completing the New Home research. This is the starting point of the functional research tree.</p>
+    <p>Functional research provides benefits such as construction speed, research speed, resource production, and resource efficiency. These technologies do not directly increase your combat power. Instead, they help you progress faster and make better use of your resources.</p>
+    <p>Completing one stage of the research tree unlocks the next. For example, completing New Home unlocks Shelter Building, followed by Headquarters Management, and so on.</p>
+    <h4>Why should you prioritize functional research?</h4>
+    <p>When you have limited badges, investing in functional research can significantly reduce construction and research times. This allows you to progress faster and save your badges for technologies that directly increase your combat power.</p>
+
+    <h3>2. Combat Research</h3>
+    <p>Now, let's get to the part everyone is most interested in: which technologies should we research, and in what order, to increase our combat power?</p>
+    <p>It's completely understandable if the research trees seem confusing at first. However, once you understand how they work, making the right decisions becomes much easier.</p>
+    <p>In our previous guide, we discussed each hero's troop capacity and explained the different ways to increase it.</p>
+    <p>The key principle to understand here is this: The greater your troop capacity, the more value you can get from combat bonuses that apply to your troops.</p>
+    <p>Therefore, when choosing combat research, you should consider not only the percentage of each bonus but also how many troops benefit from it.</p>
+
+    <h3>1. Hero Training</h3>
+    <p>Our first priority in combat research is the Hero Training tree.</p>
+    <p>The most important research in this tree is Cockpit, which increases each hero's troop capacity by +20.</p>
+    <p>Cockpit allows you to carry more troops, helping you get more value from subsequent combat research.</p>
+    <div class="tip"><strong>Recommendation:</strong> Unlock Cockpit first. At this stage, our goal is to reach Cockpit, so you do not need to complete the rest of the Hero Training tree. Save your badges for research that provides greater combat benefits.</div>
+
+    <h3>2. Elite Troops</h3>
+    <p>After Hero Training, our next priority is the Elite Troops research tree.</p>
+    <p>The first two key technologies in this tree are Firepower Upgrade and Armor Upgrade. These are fundamental research options for improving your troops' combat performance.</p>
+    <p>They increase the combat power and defense of the troops carried by your tank, contributing directly to your overall battlefield effectiveness.</p>
+    <p>Other technologies in the Elite Troops tree that directly increase troop attack power are also important. These bonuses improve the performance of your deployed troops and contribute to your overall combat strength.</p>
+    <div class="tip"><strong>Recommendation:</strong> Complete the entire Elite Troops tree. It is one of the most important research trees to prioritize when increasing your combat power.</div>
+
+    <h3>3. Military Strategies</h3>
+    <p>After Elite Troops, our next destination is Military Strategies.</p>
+    <p>Military Strategies is one of the research trees that provides significant combat power. The reason is simple: the troop combat power and troop defense bonuses found in Elite Troops appear twice each in this tree as well.</p>
+    <p>These technologies further strengthen your existing combat bonuses and improve your troops' overall performance.</p>
+    <p>Once you complete approximately 45% of the Military Strategies tree, the next research tree becomes available. Therefore, you do not need to finish the entire tree during the early stages of the game.</p>
+    <div class="tip"><strong>Recommendation:</strong> Complete the second Firepower Upgrade and Armor Upgrade research before moving on to the next tree. You can finish the remaining Military Strategies research later, depending on your badge reserves.</div>
+    <p>This approach helps you progress more efficiently, especially when badges are limited.</p>
+
+    <h3>4. Siege and Conquest</h3>
+    <p>After completing the priority research in Military Strategies, we move on to Siege and Conquest.</p>
+    <p>The main goal of this tree is to unlock attack bonuses for different troop types. However, combat bonuses are not the only things worth researching here. This tree also contains two useful technologies that improve your everyday gameplay:</p>
+    <ul>
+      <li><strong>Load Module:</strong> Increases the amount of resources you can carry while gathering. This allows you to collect more resources and improve your gathering efficiency.</li>
+      <li><strong>Drive System:</strong> Increases your tank's movement speed, helping you move around the map faster and save time.</li>
+    </ul>
+    <div class="tip"><strong>Recommendation:</strong> While focusing on attack bonuses for your troop types, make sure to include Load Module and Drive System in your research plan. This way, you can improve both your combat power and your overall gameplay efficiency.</div>
+
+    <h3>5. Peace Shield</h3>
+    <p>Our next research tree is Peace Shield.</p>
+    <p>Compared with some of the other research trees, Peace Shield requires relatively fewer badges and offers several valuable benefits.</p>
+    <p>Like the previous trees, Peace Shield includes technologies that increase troop combat power and defense. It also contains an important combat technology that reduces the proportion of troops killed during attacks on your Headquarters.</p>
+    <p>This can be particularly useful during intense battles, as it helps you manage troop losses more effectively.</p>
+    <div class="tip"><strong>Recommendation:</strong> Completing the entire Peace Shield tree is a sensible investment. Its direct combat bonuses and troop-loss reduction benefits make it well worth the badges spent.</div>
+
+    <h3>6. Alliance Weapons</h3>
+    <p>Our next research tree is Alliance Weapons.</p>
+    <p>However, there is one important detail you need to know before investing in this tree:</p>
+    <p><strong>The bonuses provided by Alliance Weapons are active only on Saturdays, during the battle day.</strong></p>
+    <p>This tree includes a variety of technologies, ranging from increased hospital capacity to bonuses that increase the damage dealt to cities.</p>
+    <p>Although these bonuses are useful, you do not need to rush to complete the entire tree. You can gradually invest in it as you accumulate badges and finish your higher-priority research.</p>
+    <p>Many players who reach the Alliance Weapons tree are already preparing for Headquarters Level 30 and, consequently, T10 troops.</p>
+    <p>Considering that T10 requires approximately 1.5 million badges, saving badges at this stage is extremely important.</p>
+    <p>Instead of completing every technology in Alliance Weapons, it is more efficient to invest only in the features that you actually need and that contribute to your gameplay strategy.</p>
+    <p>Avoiding unnecessary research will help you reach your T10 goal faster while making better use of your time and badges.</p>
+
+    <h3>📌 Summary: Recommended Research Order</h3>
+    <ol>
+      <li><strong>Hero Training:</strong> Unlock Cockpit.</li>
+      <li><strong>Elite Troops:</strong> Complete the entire tree.</li>
+      <li><strong>Military Strategies:</strong> Progress until you have completed the second Firepower Upgrade and Armor Upgrade research.</li>
+      <li><strong>Siege and Conquest:</strong> Prioritize attack bonuses for your troop types, along with Load Module and Drive System.</li>
+      <li><strong>Peace Shield:</strong> Complete the entire tree.</li>
+      <li><strong>Alliance Weapons:</strong> Invest in the technologies you need, depending on your available badges.</li>
+    </ol>
+    <p>Do not neglect functional research. Although it does not directly increase combat power, it accelerates your overall progression and helps you unlock other technologies more efficiently.</p>
+
+    <h3>🎯 Final Thoughts</h3>
+    <p>Throughout Season 1, our goal should be to invest our badges strategically rather than spending them randomly.</p>
+    <p>First, increase your troop capacity. Then focus on research that improves troop combat power and defense. As you progress, make your decisions based on your badge reserves and your long-term T10 goal.</p>
+    <p>Remember: The goal is not to be the first player to complete every research tree. The goal is to become stronger as efficiently as possible by investing your badges in the right technologies.</p>
+    <p><strong>That concludes our Season 1 Technology Research Guide!</strong></p>
+    <p>Our next guide will cover Buildings and Their Features.</p>
+  </section>
+
+  <section id="future-guides" class="guide">
+    <h2 data-i18n="nextTitle">More guides are on the way</h2>
+    <p data-i18n="nextText">Add new pages here as the alliance handbook grows. Keep this same website link and update the content over time.</p>
+  </section>
+</main>
+<footer><div class="wrap footerrow"><span>© TZCB • Top Zombies Club</span><span data-i18n="footer">Unofficial player-made community guide. Not affiliated with the game publisher.</span></div></footer>
+<script>
+const translations = {
+en:{
+eyebrow:"TOP ZOMBIES CLUB • COMMUNITY KNOWLEDGE BASE",title:'THE SURVIVOR’S<br><span style="color:var(--gold)">HANDBOOK</span>',intro:"Practical guides, formation ideas and battle strategies for Last Z: Survivor Shooter. Built by players, for players.",browse:"Browse the guides ↓",heroGuideBtn:"Read Hero Guide",library:"Guide Library",librarySub:"Your quick reference for getting stronger.",card1:"Hero Guide",card1p:"Hero levels, stars, troop tiers and equipment.",readGuide:"Read guide →",card2:"Research Guide",coming:"Season 1 research priorities, badge use and combat upgrades.",planned:"Planned guide →",card3:"Formation Guide",card3p:"Formation examples and faction synergies.",card4:"Battle Guides",card4p:"SVS, Canyon Clash and event tactics.",heroGuideTitle:"Hero Guide",heroGuideSub:"Four core ways to improve your formation.",heroPower:"1. Hero Power",heroClass:"Heroes are generally grouped into S-Tier, A-Tier and B-Tier. They also belong to one of three factions: Blood Rose, Dawn Wings and Order Guardian.",levelTitle:"A) Leveling Up Heroes",levelText:"A hero's level is limited by your Headquarters level. Each Headquarters level allows another 5 hero levels. Leveling up increases Troop Capacity, Hero Attack and Hero Defense. Use Hero EXP from building upgrades, daily missions and events.",tipLabel:"TIP",tipText:"Keep your strongest heroes at your current Headquarters level whenever possible.",starsTitle:"B) Increasing Hero Star Levels",starsText:"Star upgrades improve core stats. At 4 stars, a hero unlocks their fourth passive skill. Some passive skills provide faction-wide bonuses even when that hero is not in your formation.",giselle:"Giselle: at 4 stars, grants +5% Attack to Blood Rose heroes (as described in this guide).",eva:"Ava: at 4 stars, grants +10% Attack to Blood Rose heroes (as described in this guide).",s1Title:"S1 Heroes",s1Text:"S1 heroes such as Olivera, Scarlet and Evelyn have special skills. Check each hero's in-game skill description to confirm the exact conditions and bonuses.",troopTitle:"C) Troop Tiers",troopText:"Troop tier affects formation power and the value of your available Troop Capacity. Higher-tier troops generally contribute more CP per troop.",tier:"Troop tier",troopCaution:"Example values supplied for this guide. Verify calculations in-game, because the final power increase depends on the actual number of troops and other modifiers.",gearTitle:"D) Hero Gear",gearText:"Gear comes in Green, Blue, Purple and Yellow tiers. Yellow gear offers the highest stats in this guide's tier system. Gear types are Weapon, Helmet, Boots and Armor.",gearType:"Yellow gear type",gearBonus:"Main bonuses",weapon:"Weapon",weaponBonus:"Hero Attack and Hero Attack %",helmet:"Helmet",helmetBonus:"Hero Attack, Hero Defense and Hero Attack %",boots:"Boots",bootsBonus:"Hero Attack, Hero Defense and Hero Defense %",armor:"Armor",armorBonus:"Hero Defense and Hero Defense %",promotion:"Yellow gear can be promoted after level 20 using Energy Cores. Its stats improve with each promotion; the first promotion is an important milestone.",recommendTitle:"2. Recommended Main Formation",recommendText:"For players who prefer to spend less, focusing resources on heroes that are easier to star up can be an efficient way to strengthen your first formation. The original recommendation highlights Blood Rose heroes such as Vivian, Miranda and Katrina.",verifyLabel:"Before publishing",verifyText:"Please verify hero names, faction bonuses, troop CP values and skill effects against the current game version. Game balance and translations can change.",nextTitle:"More guides are on the way",nextText:"Add new pages here as the alliance handbook grows. Keep this same website link and update the content over time.",footer:"Unofficial player-made community guide. Not affiliated with the game publisher."
+},
+tr:{
+eyebrow:"TOP ZOMBIES CLUB • TOPLULUK REHBERİ",title:'SURVIVOR<br><span style="color:var(--gold)">EL KİTABI</span>',intro:"Last Z: Survivor Shooter için pratik rehberler, formasyon önerileri ve savaş stratejileri. Oyunculardan oyunculara.",browse:"Rehberlere göz at ↓",heroGuideBtn:"Kahraman Rehberi",library:"Rehber Kütüphanesi",librarySub:"Güçlenmek için hızlı başvuru kaynağın.",card1:"Kahraman Rehberi",card1p:"Kahraman seviyeleri, yıldızlar, asker seviyeleri ve ekipmanlar.",readGuide:"Rehberi oku →",card2:"Araştırma Rehberi",coming:"Sezon 1 araştırma öncelikleri, rozet kullanımı ve savaş geliştirmeleri.",planned:"Planlanan rehber →",card3:"Formasyon Rehberi",card3p:"Formasyon örnekleri ve kamp uyumları.",card4:"Savaş Rehberleri",card4p:"SVS, Canyon Clash ve etkinlik taktikleri.",heroGuideTitle:"Kahraman Rehberi",heroGuideSub:"Formasyonunu güçlendirmenin dört temel yolu.",heroPower:"1. Kahraman Gücü",heroClass:"Kahramanlar genel olarak S, A ve B seviyelerine ayrılır. Ayrıca üç kampa ayrılırlar: Blood Rose, Dawn Wings ve Order Guardian.",levelTitle:"A) Kahraman Seviyesini Yükseltmek",levelText:"Kahraman seviyesi Karargâh seviyenle sınırlıdır. Her Karargâh seviyesi 5 ek kahraman seviyesi sağlar. Seviye atlamak asker taşıma kapasitesini, kahraman saldırısını ve savunmasını artırır. Bina yükseltmeleri, günlük görevler ve etkinliklerden Kahraman EXP topla.",tipLabel:"İPUCU",tipText:"Mümkün olduğunda en güçlü kahramanlarının seviyesini mevcut Karargâh seviyene eşit tut.",starsTitle:"B) Kahraman Yıldız Seviyesini Yükseltmek",starsText:"Yıldız yükseltmeleri temel istatistikleri artırır. 4 yıldızda kahramanın dördüncü pasif yeteneği açılır. Bazı pasif yetenekler, kahraman formasyonda olmasa bile tüm kampa bonus sağlar.",giselle:"Giselle: 4 yıldızda Blood Rose kahramanlarına +%5 Saldırı sağlar (bu rehberde belirtilen şekilde).",eva:"Ava: 4 yıldızda Blood Rose kahramanlarına +%10 Saldırı sağlar (bu rehberde belirtilen şekilde).",s1Title:"S1 Kahramanları",s1Text:"Olivera, Scarlet ve Evelyn gibi S1 kahramanlarının özel yetenekleri vardır. Koşulları ve bonusları doğrulamak için oyun içindeki yetenek açıklamasını kontrol et.",troopTitle:"C) Asker Seviyeleri",troopText:"Asker seviyesi formasyon gücünü ve asker kapasitesinin değerini etkiler. Daha yüksek seviyeli askerler genellikle asker başına daha fazla CP sağlar.",tier:"Asker seviyesi",troopCaution:"Bunlar bu rehber için verilen örnek değerlerdir. Son güç artışı asker sayısına ve diğer etkenlere bağlı olduğundan oyun içinde doğrula.",gearTitle:"D) Kahraman Ekipmanları",gearText:"Ekipmanlar Yeşil, Mavi, Mor ve Sarı seviyelerdedir. Bu rehberde Sarı ekipman en yüksek istatistikleri sağlar. Ekipman türleri Silah, Kask, Bot ve Zırhtır.",gearType:"Sarı ekipman türü",gearBonus:"Temel bonuslar",weapon:"Silah",weaponBonus:"Kahraman Saldırısı ve Saldırı %",helmet:"Kask",helmetBonus:"Kahraman Saldırısı, Savunması ve Saldırı %",boots:"Bot",bootsBonus:"Kahraman Saldırısı, Savunması ve Savunma %",armor:"Zırh",armorBonus:"Kahraman Savunması ve Savunma %",promotion:"Sarı ekipman 20. seviyeden sonra Enerji Çekirdekleriyle geliştirilebilir. Her geliştirme istatistikleri artırır; ilk geliştirme önemli bir eşiktir.",recommendTitle:"2. Önerilen Ana Formasyon",recommendText:"Daha az harcama yapmak isteyen oyuncular, yıldız seviyesini daha kolay yükseltebildikleri kahramanlara kaynak ayırarak ilk formasyonlarını güçlendirebilir. Öneride Vivian, Miranda ve Katrina gibi Blood Rose kahramanları öne çıkar.",verifyLabel:"Yayınlamadan önce",verifyText:"Kahraman adlarını, kamp bonuslarını, asker CP değerlerini ve yetenek etkilerini oyunun güncel sürümünde doğrula. Oyun dengesi ve çeviriler değişebilir.",nextTitle:"Yeni rehberler yolda",nextText:"İttifak el kitabı büyüdükçe buraya yeni rehberler ekleyebilirsin. Aynı site bağlantısını koruyup içeriği zamanla güncelle.",footer:"Oyuncular tarafından hazırlanmış bağımsız topluluk rehberi. Oyun yayıncısıyla bağlantılı değildir."
+}
+};
+const languageSelect=document.getElementById('language');
+function setLanguage(lang){
+  if(translations[lang]){
+    document.documentElement.lang=lang;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key=el.getAttribute('data-i18n');
+      if(translations[lang][key]!==undefined) el.innerHTML=translations[lang][key];
+    });
+  }else{
+    const target=lang;
+    const page=window.location.href.split('#')[0];
+    window.location.href='https://translate.google.com/translate?sl=en&tl='+encodeURIComponent(target)+'&u='+encodeURIComponent(page);
+  }
+}
+languageSelect.addEventListener('change',e=>setLanguage(e.target.value));
+</script>
+</body>
+</html>
